@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+	<head>
+		<title>新添采购单</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<script language="javascript" src="../script/common.js" ></script>
+		<script type="text/javascript" src="../script/productDiv.js" ></script>
+		<script type="text/javascript" src="../script/My97DatePicker/WdatePicker.js" ></script>
+		
+		<style type="text/css">
+			div.product{
+				position: absolute;
+				top:2px;
+				left: 2px;
+				width:100%;
+				height: 98%;
+				background-color: #fffffe;
+			}
+		</style>
+
+		
+	</head>
+
+	<body>
+		<div id="m">
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0" id="m">
+			  <tr>
+				<td nowrap class="title1">采购单管理 -- 新添采购单</td>
+			  </tr>
+			</table>
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td width="30px" nowrap class="toolbar">&nbsp;</td>
+				<td width="40px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)" onclick="location.href='pomainform.html'">&nbsp;	</td>
+				<td nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+			  </tr>
+			</table>
+			<div class="query_div">
+				相关单据号：<input type="text" id="poId" />
+				收支类型：
+				<select id="venderCode">
+					<option value="">请选择 </option>
+					<option value="">收入 </option>
+					<option value="">支出 </option>
+				</select>
+				单据付款方式：
+					<select id="payType">
+						<option value="">请选择</option>
+						<option value="货到付款">货到付款</option>
+						<option value="款到发货">款到发货</option>
+						<option value="预付款到发货">预付款到发货</option>
+					</select>
+				创建日期：
+				<input class="Wdate" type="text" id="startDate"  onFocus="WdatePicker({isShowClear:true,readOnly:true})"/>
+				-
+				<input class="Wdate" type="text" id="endDate"  onFocus="WdatePicker({isShowClear:true,readOnly:true})"/>
+				<input type="button" value="查询" onclick="goPage(1)"/>
+			</div>
+				
+			<div id="dataList">
+				
+			
+			
+			</div>
+		</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<title>新添销售单</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<script language="javascript" src="../script/common.js" ></script>
+		<script type="text/javascript" src="../script/productDiv.js" ></script>
+		<script type="text/javascript" src="../script/My97DatePicker/WdatePicker.js" ></script>
+		
+		<style type="text/css">
+			div.product{
+				position: absolute;
+				top:2px;
+				left: 2px;
+				width:100%;
+				height: 98%;
+				background-color: #fffffe;
+			}
+		</style>
+
+		
+	</head>
+
+	<body>
+		<div id="m">
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0" id="m">
+			  <tr>
+				<td nowrap class="title1">业务报表 -- 月度采购报表</td>
+			  </tr>
+			</table>
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td width="30px" nowrap class="toolbar">&nbsp;</td>
+				<td width="40px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+				<td width="60px" nowrap class="toolbar" onMouseOver="OMO(event)" onMouseOut="OMOU(event)">&nbsp;</td>
+				<td width="20px" nowrap class="toolbar">&nbsp;</td>
+			  </tr>
+			</table>
+			<div class="query_div">
+				<input class="Wdate" type="text" id="startDate"  onFocus="WdatePicker({isShowClear:true,readOnly:true})"/>
+				-
+				<input class="Wdate" type="text" id="endDate"  onFocus="WdatePicker({isShowClear:true,readOnly:true})"/>
+				<input type="button" value="查询" onclick="goPage(1)"/>
+			</div>
+			
+			<div class="instorage_total">
+			<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+			 <tr>
+				<td class="title1">入库单据数</td>
+				<td class="title1">产品总数量</td>
+				<td class="title1">入库产品总金额</td>
+			 </tr>
+			 <tr>
+				<td align="center">12</td>
+				<td align="center">6</td>
+				<td align="center">432423</td>
+			 </tr>
+			 <tr style="display:none"><td colspan="10" name="detail"></td></tr>
+			</table>
+			</div>	
+			<p>&nbsp;</p>
+			<div id="dataList">
+				<table width="100%" border="0" align="center" cellspacing="1" class="c">
+					<tr>
+						<td class="title1">采购单号</td>
+						<td class="title1">入库时期</td>
+						<td class="title1">产品编号</td>
+						<td class="title1">产品名称</td>
+						<td class="title1">产品数</td>
+						<td class="title1">产品总金额</td>
+					</tr>
+			
+					<tr>
+						<td align="center"><a href="pomain_detail.html">20170621142653</a></td>
+						<td align="center">2017-06-21 14:26:53</td>
+						<td align="center">京东商城</td>
+						<td align="center">lisi</td>
+						<td align="center">0.0</td>
+						<td align="center">6.0</td>
+						
+					</tr>
+					<tr style="display:none"><td colspan="10" name="detail"></td></tr>
+			
+				</table>
+
+
+				<div class="pageDiv">
+					当前第<span id="currentPage">1</span>页
+					
+						<input type="button" value="首页" disabled="disabled"/>
+						<input type="button" value="上一页" disabled="disabled"/>
+					
+					
+					
+					
+						<input type="button" value="下一页" onclick="goPage(2)"/>
+						<input type="button" value="末页" onclick="goPage(2)"/>
+					
+					共2页 3条记录
+				</div>
+			
+			
+			</div>
+		</div>
+
+
+	</body>
+</html>
